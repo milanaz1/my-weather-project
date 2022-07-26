@@ -1,5 +1,3 @@
-import axios from "axios";
-
 function search(city) {
   const API_KEY = "9b71ae985af1baa6a806c916c0a028f9";
   const apiUrl = "https://api.openweathermap.org/data/2.5/weather";
