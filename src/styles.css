@@ -1,0 +1,80 @@
+.info {
+  display: block;
+  margin: 0 auto;
+  max-width: 850px;
+  border: 30px solid rgba(165, 211, 235, 0.5);
+  border-radius: 20px;
+  padding: 20px;
+  background-color: rgba(251, 248, 204, 0.3);
+  font-family: "Arima", cursive;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+  color: #3ca9ee;
+  text-shadow: 1px 1px 2px #a5d3eb;
+  padding: 10px 20px;
+}
+
+.search {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+input {
+  background-color: rgba(251, 248, 204, 0.7);
+  border: 0.1px solid #a5d3eb;
+  width: 45%;
+  transition: all 200ms ease-in-out;
+}
+
+input:hover {
+  cursor: pointer;
+  border: 2px solid #a5d3eb;
+  background-color: rgba(251, 248, 204, 0.1);
+}
+
+button {
+  display: inline;
+  padding: 1px 30px;
+  border: 0.1px solid #a5d3eb;
+  background-color: rgba(251, 248, 204, 0.7);
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgba(251, 248, 204, 0.1);
+  border: 2px solid #a5d3eb;
+}
+
+.daily {
+  line-height: 17px;
+  font-size: 21px;
+  margin: 40px 15px;
+  padding: 15px 0;
+}
+
+.card {
+  margin: 5px;
+  transition: all 200ms ease-in-out;
+  border: 0.1px solid #3ca9ee;
+  border-radius: 50%;
+}
+
+.card:hover {
+  background-color: rgba(251, 248, 204, 0.7);
+  cursor: pointer;
+}
+
+.card-title,
+.card-text {
+  text-align: center;
+}
+
+.card-title {
+  color: #3ca9ee;
+}

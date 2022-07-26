@@ -1,1 +1,105 @@
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arima:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <div class="info">
+      <h1>
+        <span id="city-now">Kyiv</span> <span id="degrees">20&#8451;</span>
+      </h1>
+      <h2>Monday, 15:00</h2>
+      <div class="search">
+        <form class="city-form">
+          <input id="search-text" type="text" placeholder="Choose the city" />
+          <button type="submit" id="submit-button">🔍</button>
+        </form>
+      </div>
+      <div class="container">
+        <div class="row cols">
+          <div class="col">
+            <h3 class="colName">Daily weather</h3>
+            <div class="daily">
+              <p>Friday 1/7/2022</p>
+              <p>4.30pm</p>
+              <hr />
+              <p>Visibility: 16km</p>
+              <p>Humidity: 32%</p>
+              <p>Feels like: 31&#8451;</p>
+            </div>
+          </div>
+          <div class="col">
+            <h3 class="colName">Weekly weather</h3>
+            <div class="row">
+              <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Sat🌞</h5>
+                    <p class="card-text">16&#8451;-26&#8451;</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Sun🌞</h5>
+                    <p class="card-text">14&#8451;-29&#8451;</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Mon🌞</h5>
+                    <p class="card-text">17&#8451;-32&#8451;</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Tue🌞</h5>
+                    <p class="card-text">19&#8451;-33&#8451;</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Wed🌩</h5>
+                    <p class="card-text">20&#8451;-34&#8451;</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Thu🌨</h5>
+                    <p class="card-text">18&#8451;-28&#8451;</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
