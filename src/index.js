@@ -25,6 +25,29 @@ function handleSubmit(event) {
   search(city);
 }
 
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${day}, ${hours}:${minutes}`;
+}
+
 function showTemp(response) {
   document.querySelector("#search-text").innerHTML = response.data.name;
   document.querySelector("#degrees").innerHTML =
@@ -32,9 +55,11 @@ function showTemp(response) {
   let description = document.querySelector("#weatherDescription");
   let humidity = document.querySelector("#humidity");
   let windSpeed = document.querySelector("#windSpeed");
+  let currentDate = document.querySelector("#currentDate");
   description.innerHTML = response.data.weather[0].description;
   humidity.innerHTML = response.data.main.humidity;
   windSpeed.innerHTML = Math.round(response.data.wind.speed);
+  currentDate.innerHTML = formatDate(response.data.dt * 1000);
 }
 
 let form = document.querySelector(".city-form");
