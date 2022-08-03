@@ -57,6 +57,10 @@ button:hover {
   border: 2px solid #a5d3eb;
 }
 
+#weatherDescription {
+  text-transform: capitalize;
+}
+
 .daily {
   line-height: 17px;
   font-size: 21px;
