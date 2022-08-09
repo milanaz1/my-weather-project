@@ -62,6 +62,7 @@ function showTemp(response) {
   windSpeed.innerHTML = Math.round(response.data.wind.speed);
   currentDate.innerHTML = formatDate(response.data.dt * 1000);
   iconWeather.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  iconWeather.setAttribute("alt", response.data.weather[0].description);
 }
 
 let form = document.querySelector(".city-form");
