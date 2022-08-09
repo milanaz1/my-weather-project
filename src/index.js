@@ -56,10 +56,12 @@ function showTemp(response) {
   let humidity = document.querySelector("#humidity");
   let windSpeed = document.querySelector("#windSpeed");
   let currentDate = document.querySelector("#currentDate");
+  let iconWeather = document.querySelector("#weather-icon");
   description.innerHTML = response.data.weather[0].description;
   humidity.innerHTML = response.data.main.humidity;
   windSpeed.innerHTML = Math.round(response.data.wind.speed);
   currentDate.innerHTML = formatDate(response.data.dt * 1000);
+  iconWeather.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
 let form = document.querySelector(".city-form");
