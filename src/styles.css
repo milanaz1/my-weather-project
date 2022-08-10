@@ -28,6 +28,26 @@ h3 {
   margin: 0; 
 }
 
+a {
+  color: #3ca9ee;
+  text-decoration: none;
+}
+
+#units { 
+  font-size: 17px;
+  position: relative;
+  top: -15px;
+}
+
+#units .active {
+  color: black;
+  text-decoration: none;
+}
+
+#units .active:hover { 
+  text-decoration: none;
+}
+
 .search {
   text-align: center;
   display: block;
