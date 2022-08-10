@@ -49,9 +49,10 @@ function formatDate(timestamp) {
 }
 
 function showTemp(response) {
+  celciusTemperature = response.data.main.temp;
   document.querySelector("#search-text").innerHTML = response.data.name;
   document.querySelector("#degrees").innerHTML =
-    Math.round(response.data.main.temp) + "&#8451;";
+    Math.round(celciusTemperature);
   let description = document.querySelector("#weatherDescription");
   let humidity = document.querySelector("#humidity");
   let windSpeed = document.querySelector("#windSpeed");
@@ -65,8 +66,20 @@ function showTemp(response) {
   iconWeather.setAttribute("alt", response.data.weather[0].description);
 }
 
+function showFahrenheitTemp(event) {
+  event.preventDefault();
+  let temperatureFahenheit = (celciusTemperature * 9) / 5 + 32; 
+  let temperature = document.querySelector("#degrees");
+  temperature.innerHTML = Math.round(temperatureFahenheit);
+}
+
+let celciusTemperature = null;
+
 let form = document.querySelector(".city-form");
 form.addEventListener("submit", handleSubmit);
+
+let fahrenheitLink = document.querySelector("#fahrenheit");
+fahrenheitLink.addEventListener("click", showFahrenheitTemp);
 
 /*
 
