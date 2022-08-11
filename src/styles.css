@@ -100,7 +100,6 @@ button:hover {
 }
 
 .card {
-  margin: 5px;
   transition: all 200ms ease-in-out;
   border: 0.1px solid #3ca9ee;
   border-radius: 50%;
@@ -111,31 +110,17 @@ button:hover {
   cursor: pointer;
 }
 
-.card-title,
-.card-text {
+.future-forecast {
   text-align: center;
 }
 
-.card-title {
+h5.future-date-card { 
+  margin-top: 7px;
+  margin-bottom: 0;
   color: #3ca9ee;
 }
 
-.card-body { 
-  text-align: center;
-}
-
-h5.card-title { 
-  margin: 0;
-}
-
-#future-weather-icon {
-  display: inline;
-  float: right;
-  position: relative;
-  right: 25px;
-  top: -5px;
-}
-
-p.future-temperature-card {
-  margin: 0;
+img#future-weather-icon {
+  display:block; 
+  margin: 0 auto;
 }
