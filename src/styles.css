@@ -119,3 +119,23 @@ button:hover {
 .card-title {
   color: #3ca9ee;
 }
+
+.card-body { 
+  text-align: center;
+}
+
+h5.card-title { 
+  margin: 0;
+}
+
+#future-weather-icon {
+  display: inline;
+  float: right;
+  position: relative;
+  right: 25px;
+  top: -5px;
+}
+
+p.future-temperature-card {
+  margin: 0;
+}
