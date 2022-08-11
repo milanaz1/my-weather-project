@@ -15,19 +15,25 @@ function search(city) {
 
 function displayForecats() { 
  forecastElement = document.querySelector("#card-body-forecast");
-let forecastHTML = `<div class="row">`;
-forecastHTML = forecastHTML + `              
-<div class="col-5">
-  <div class="card">
-      <h5 class="future-date-card">Thu</h5>
-      <img src="https://openweathermap.org/img/wn/04n@2x.png" alt="" width="30px" id="future-weather-icon">
-      <p class="future-temperature-card"><span class="future-degree-max">19&#8451;</span><span class="future-degree-min">-33&#8451;</span>
-    </div>
-  </div>
-`;
-forecastHTML = forecastHTML + `</div>`
-forecastElement.innerHTML = forecastHTML;
-}
+ let forecastHTML = `<div class="row">`;
+let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+days.forEach(function (day) {
+  
+ forecastHTML = forecastHTML + `              
+ <div class="col">
+   <div class="card">
+       <h5 class="future-date-card">${day}</h5>
+       <img src="https://openweathermap.org/img/wn/04n@2x.png" alt="" width="30px" id="future-weather-icon">
+       <p class="future-temperature-card"><span class="future-degree-max">19&#8451;</span><span class="future-degree-min">-33&#8451;</span>
+     </div>
+   </div>
+ `;
+});
+ forecastHTML = forecastHTML + `</div>`
+ forecastElement.innerHTML = forecastHTML;
+;
+
+};
 
 function displayActiveCity(activeCity) {
   const el = document.querySelector("#city-now");
